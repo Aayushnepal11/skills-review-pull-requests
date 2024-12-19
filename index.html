@@ -26,8 +26,8 @@
     }
   }
 </style>
-
-<h1>Tic Tac Toe</h1>
+<h1 class="username"></h1>
+<p>Welcome to the Tic Tac Toe game. Click on a box to place your mark.</p>
 
 <table>
   <tr>
@@ -50,6 +50,9 @@
 <h2 hidden>Game over, refresh to play again 🧑‍💻 🤖!</h2>
 
 <script>
+ let name = prompt('What is your name? ')
+ const username = document.querySelector('.username');
+  username.textContent = `Hello ${name}!`;
   // Initialization
   const boxes = Array.from(document.querySelectorAll("td"));
   const inputs = Array.from(document.querySelectorAll("[type=checkbox]"));
